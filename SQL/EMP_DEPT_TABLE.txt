@@ -1,0 +1,18 @@
+https://www.cs.uct.ac.za/mit_notes/database/htmls/chp03.html
+
+create table DEPT(DEPTNo integer primary key,Dname varchar2(20),loc varchar2(20) not null);
+create table emp(empno integer primary key,ename varchar2(20) not null,job varchar2(20) not null,hiredate date not null,mgr integer, comm number(5),sal real,deptno integer, foreign key(deptno) references dept(deptno));
+
+insert all
+
+into dept values(10,'Accounting','New York')
+into dept values(20,'Research','Dallas')
+into dept values(30,'Sales','Chicago')
+into dept values(40,'Operations','Boston')
+
+select 1 from dept;
+
+SELECT * FROM EMP JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO;
+
+
+
